@@ -1,10 +1,13 @@
 package com.workshop
 
-import com.facebook.react.ReactActivity
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import com.workshop.react.ReactFragment
 
-class MainActivity : ReactActivity() {
+class MainActivity : AppCompatActivity() {
 
-    override fun getMainComponentName(): String? {
-        return "workshop"
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
     }
+
 }

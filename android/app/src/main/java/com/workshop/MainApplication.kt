@@ -11,9 +11,7 @@ import java.util.*
 class MainApplication : Application(), ReactApplication {
 
     private val mReactNativeHost = object : ReactNativeHost(this) {
-        override fun getUseDeveloperSupport(): Boolean {
-            return BuildConfig.DEBUG
-        }
+        override fun getUseDeveloperSupport() = BuildConfig.DEBUG
 
         override fun getPackages(): List<ReactPackage> {
             return Arrays.asList<ReactPackage>(
@@ -21,9 +19,7 @@ class MainApplication : Application(), ReactApplication {
             )
         }
 
-        override fun getJSMainModuleName(): String {
-            return "index"
-        }
+        override fun getJSMainModuleName() = "index"
     }
 
     override fun getReactNativeHost(): ReactNativeHost {
@@ -32,6 +28,6 @@ class MainApplication : Application(), ReactApplication {
 
     override fun onCreate() {
         super.onCreate()
-        SoLoader.init(this, /* native exopackage */ false)
+        SoLoader.init(this, false)
     }
 }
